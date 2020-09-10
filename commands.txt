@@ -35,3 +35,9 @@ Thus you can use {{user}}, or {{user.is_auhenticated}} as context variables
 == Create a new app ==
 
 python manage.py startapp blog
+the add the app to INSTALLED_APPS
+
+always after creating or modifying a model, run :
+python manage.py makemigrations
+python manage.py migrate
+
