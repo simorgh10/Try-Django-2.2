@@ -10,3 +10,13 @@ python manage.py migrate
 python manage.py createsuperuser
 
 (username guest password guest)
+
+== View settings in shell ==
+
+python manage.py shell
+see settings
+>>> from django.conf import settings
+>>> settings.BASE_DIR
+
+
+
