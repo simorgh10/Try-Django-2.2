@@ -32,3 +32,6 @@ default context variables are coming from settings context processords
 
 Thus you can use {{user}}, or {{user.is_auhenticated}} as context variables
 
+== Create a new app ==
+
+python manage.py startapp blog
