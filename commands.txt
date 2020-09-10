@@ -18,5 +18,17 @@ see settings
 >>> from django.conf import settings
 >>> settings.BASE_DIR
 
+== context processors ==
 
+Note :
+default context variables are coming from settings context processords
+
+'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+
+Thus you can use {{user}}, or {{user.is_auhenticated}} as context variables
 
