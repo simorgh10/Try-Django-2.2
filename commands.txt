@@ -1,0 +1,12 @@
+== Setup the project ==
+
+pipenv --python 3.8 install django==3.1.1
+pipenv shell
+mkdir src
+cd ./src
+django-admin startproject try_django .
+python manage.py runserver
+python manage.py migrate
+python manage.py createsuperuser
+
+(username guest password guest)
