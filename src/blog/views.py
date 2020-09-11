@@ -38,7 +38,7 @@ def blog_post_detail_view(request, slug):
 @staff_member_required
 def blog_post_update_view(request, slug):
     obj = get_object_or_404(BlogPost, slug=slug)
-    form = BlogPostModelForm(request.POST or None, instance=obj)
+    form = BlogPostModelForm(request.POST or None, request.FILES or None, instance=obj)
     if form.is_valid():
         form.save()
     template_name = "form.html"
