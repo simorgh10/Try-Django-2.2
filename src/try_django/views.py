@@ -7,7 +7,7 @@ from blog.models import BlogPost
 
 
 def home_page(request):
-    qs = BlogPost.objects.all()[:5]
+    qs = BlogPost.objects.published()[:5]
     template_name = "home.html"
     blog_list = {"title": "Welcome to Try Django", "blog_list": qs}
     return render(request, "home.html", blog_list)

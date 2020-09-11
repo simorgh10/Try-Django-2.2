@@ -5,13 +5,11 @@
 
 <h1>{{title}}</h1>
 
-{% if user.is_authenticated %}
 {% for blog_post in blog_list %}
 <div class="row">
     {% include "blog/list-inline.html" with blog_post=blog_post truncate=True %}
 </div>
 {% endfor %}
-{% endif %}
 
 
 {% endblock %}
