@@ -2,21 +2,12 @@
 
 {% block content %}
 
-{{title}}
-
-{{request.user}}
-{{request.path}}
-
-{{user}}
-{{user.is_authenticated}}
+<h1>{{title}}</h1>
 
 {% if user.is_authenticated %}
-<h1>User only Data.</h1>
-<ul>
-    {% for a in my_list %}
-    <li>{{a}}</li>
-    {% endfor %}
-</ul>
+{% for blog_post in blog_list %}
+{% include "blog/list-inline.html" with blog_post=blog_post %}
+{% endfor %}
 {% endif %}
 
 {% endblock %}

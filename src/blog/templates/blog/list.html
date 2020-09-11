@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<lu>
-    {% for obj in object_list %}
-    <li><a href="{{ obj.get_absolute_url }}">{{obj.title}}</a></li>
-    {% endfor %}
-</lu>
+<div class="row">
+        {% for obj in object_list %}
+        {% include "blog/list-inline.html" with blog_post=obj %}
+        {% endfor %}
+</div>
 
 {% endblock %}

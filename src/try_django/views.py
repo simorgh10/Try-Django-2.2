@@ -3,10 +3,14 @@ from django.shortcuts import render
 from django.template.loader import get_template
 
 from .forms import ContactForm
+from blog.models import BlogPost
 
 
 def home_page(request):
-    return render(request, "home.html", {"title": "Hello there ...", "my_list": [1, 2, 3, 4]})
+    qs = BlogPost.objects.all()[:5]
+    template_name = "home.html"
+    blog_list = {"title": "Welcome to Try Django", "blog_list": qs}
+    return render(request, "home.html", blog_list)
 
 def about_page(request):
     return render(request, "about.html", {"title": "About Us"})
