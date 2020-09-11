@@ -54,3 +54,9 @@ python manage.py collectstatic
 install pillow
 pipenv install pillow
 here validates if uploaded file is an image
+
+
+== New app searches ==
+
+python manage.py startapp searches
+the add the app to INSTALLED_APPS
