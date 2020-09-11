@@ -41,3 +41,6 @@ always after creating or modifying a model, run :
 python manage.py makemigrations
 python manage.py migrate
 
+== Creating a new user ==
+
+the password used for user author is authorauthor2
