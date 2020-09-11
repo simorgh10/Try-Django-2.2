@@ -22,7 +22,7 @@ def blog_post_create_view(request):
         obj.user = request.user
         obj.save()
         form = BlogPostModelForm()
-    template_name = "blog/form.html"
+    template_name = "form.html"
     context = {"title": "Create a new blog post", "form": form}
     return render(request, template_name, context)
 
