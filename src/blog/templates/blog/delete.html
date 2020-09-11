@@ -2,7 +2,11 @@
 
 {% block content %}
 
-<h1>{{obj.title}} - Delete </h1>
-<p>{{obj.content}}</p>
+<h1>Are you sure you want to delete this post ?</h1>
+<p>{{obj.title}}</p>
+
+<form method="POST"> {% csrf_token %}
+    <button class="btn btn-danger">Yes</button>
+</form>
 
 {% endblock %}
