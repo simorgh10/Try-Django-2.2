@@ -49,3 +49,8 @@ the password used for user author is authorauthor2
 
 to collect static files
 python manage.py collectstatic
+
+== Image files ==
+install pillow
+pipenv install pillow
+here validates if uploaded file is an image
