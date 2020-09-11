@@ -44,3 +44,8 @@ python manage.py migrate
 == Creating a new user ==
 
 the password used for user author is authorauthor2
+
+== Static files ==
+
+to collect static files
+python manage.py collectstatic
