@@ -18,7 +18,9 @@ def blog_post_list_view(request):
 def blog_post_create_view(request):
     form = BlogPostModelForm(request.POST or None)
     if form.is_valid():
-        obj = form.save()
+        obj = form.save(commit=False)
+        obj.user = request.user
+        obj.save()
         form = BlogPostModelForm()
     template_name = "blog/form.html"
     context = {"title": "Create a new blog post", "form": form}
